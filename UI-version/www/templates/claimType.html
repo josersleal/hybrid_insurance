@@ -1,0 +1,17 @@
+<ion-view class="padding scroll-bg" title="Claim Type" view-title="Claim Type">
+	<div class="bar bar-subheader bar-light" style="text-align: center;">
+		<label style="font-size: 22px;"><strong>Select the insurance</strong></label>
+	</div>
+
+	<ion-content class="has-subheader scroll-bg">
+		<div class="list list-inset list-light scroll-bg">
+			<div class="item item-light scroll-bg" style="border-style:none;">	
+			  <ion-item class="item item-icon-left" ng-repeat="claim in claimTypes" href="#/app/claimForm/{{claim.id}}">
+				<i class="icon {{claim.icon}}"></i>
+				<strong>{{claim.name}}</strong>
+			  </ion-item>
+		</div>
+		</div>
+
+	  </ion-content>
+</ion-view> 

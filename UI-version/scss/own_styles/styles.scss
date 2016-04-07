@@ -1,0 +1,5 @@
+$big-bg:      'www/img/acrobat.jpg';
+.scroll-bg {
+  background: url($big-bg) no-repeat center center fixed;
+  background-size: cover;
+}

@@ -1,0 +1,18 @@
+.popup-title {
+	font-weight: bold;
+	color: white;
+}
+
+.popup-head {	
+  	border-bottom: 1px white solid;
+  	background-color: red;
+}
+
+.popup-body {
+	color: white;
+  	background-color: red;
+}
+
+.popup-buttons  {
+  	background-color: red;
+}

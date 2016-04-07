@@ -1,0 +1,26 @@
+<ion-view class="padding scroll-bg" title="Claim Type" view-title="Claim Type">
+<!-- 	<ion-nav-bar class="bar-positive"> -->
+<!-- 		<ion-nav-buttons side="left"> -->
+<!-- 			<a class="button icon-left ion-chevron-left button-clear" href="#/app/main">Main</a> -->
+<!-- 		</ion-nav-buttons> -->
+		<ion-nav-buttons side="left">
+			<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+		</ion-nav-buttons>
+		<ion-nav-buttons side="right">
+			<img class='title-image' src='img/logo_storebrand_172x21.jpg' height="15">
+		</ion-nav-buttons>
+<!-- 	</ion-nav-bar> -->
+	<h2 class="bar bar-subheader bar-positive" align="center">Select the insurance</h2>
+
+	<ion-content class="has-subheader">
+		<div class="list list-inset list-light scroll-bg">
+			<div class="item item-light scroll-bg" style="border-style:none;">	
+			  <ion-item class="item item-icon-left" ng-repeat="claimtype in claimTypes" href="#/app/claimForm/{{claimtype.id}}">
+				<i class="icon {{claimtype.icon}}"></i>
+				{{claimtype.name}}
+			  </ion-item>
+		</div>
+		</div>
+
+	  </ion-content>
+</ion-view> 

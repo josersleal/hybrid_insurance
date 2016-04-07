@@ -1,0 +1,15 @@
+.stopWrapping{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.myContainer {
+	display: flex;
+  	flex-direction: row;
+}
+
+.myLabel {
+	display: inline-block;
+	border-style: none;
+}

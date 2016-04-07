@@ -1,0 +1,80 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$positive:                        #AA3939 !default;
+$balanced:                        #777777 !default;
+$stable:                          #584343 !default;
+
+$big-bg:      '../img/acrobat.jpg';
+.scroll-bg{
+  background: url($big-bg) no-repeat center center fixed;
+  background-size: cover;
+}
+.centeredContainer {
+            width: 90%;
+            padding-left: 7%;
+
+} 
+
+table, th , td {
+border: 2px solid black;
+padding: 5px;
+}
+
+table th {
+background-color: #AA3939;
+text-align: center;
+}
+
+table tr:nth-child(odd) {
+background-color: #f0f0f0;
+text-align: center;
+}
+
+table tr:nth-child(even) {
+background-color: #ffffff;
+text-align: center;
+}
+
+.centerTable { margin: 0px auto; }
+
+.myObject{
+	margin: 10px auto;
+	width: 90%;	
+	border-radius: 15px;
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip: padding; 
+	background-clip: padding-box;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+.row-ID {
+  width: 15%;
+}
+.row-insurance {
+  width: 15%;
+}
+.row-title {
+  width: 60%;
+}
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+

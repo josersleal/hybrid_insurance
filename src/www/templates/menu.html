@@ -1,0 +1,33 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button ></ion-nav-back-button>
+            <ion-nav-buttons side="Left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+               <img class='title-image' src='img/logo_storebrand.png' height="20" style="margin: 7px;">
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-positive">
+<!--             <h1 class="title">Menu</h1> -->
+            
+            	<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+			
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item menu-close href="#/app/main" class="item-positive">Main Page</ion-item>
+				<ion-item menu-close ng-click="toClaimList()" class="item-positive">Claims</ion-item>	
+                <ion-item menu-close href="#/app/healthProfile" class="item-positive">
+                    Health Profile
+                </ion-item>
+                <ion-item menu-close ng-click="login()" class="item-positive">Login</ion-item>
+<!-- 				<ion-item menu-close ng-click="logout()" class="item-positive">Logout</ion-item > -->
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

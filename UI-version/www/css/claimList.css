@@ -1,0 +1,48 @@
+/* Column widths are based on these cells */
+<style>
+
+table, th , td {
+border: 2px solid black;
+}
+
+table th {
+background-color: #AA3939;
+text-align: center;
+}
+
+table tr:nth-child(odd) {
+background-color: #f0f0f0;
+text-align: center;
+}
+
+table tr:nth-child(even) {
+background-color: #ffffff;
+text-align: center;
+}
+
+.centerTable { margin: 0px auto; }
+
+.myObject{
+	margin: 10px auto;
+	width: 90%;	
+	border-radius: 15px;
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip: padding; 
+	background-clip: padding-box;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+.row-ID {
+  width: 20%;
+}
+.row-insurance {
+  width: 20%;
+}
+.row-title {
+  width: 40%;
+}
+.row-status {
+  width: 20%;
+}
+</style>

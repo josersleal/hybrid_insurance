@@ -1,0 +1,51 @@
+<ion-view class="padding scroll-bg" title="User profile" view-title="User profile">
+	<div class="bar bar-subheader bar-light" style="text-align: center;">
+		<label style="font-size: 22px;"><strong>Fill your profile information</strong></label>
+	</div>
+
+	<ion-content class="has-subheader" style="margin: 10px;">
+		<ion-list class="item item-select" style="border: none;">
+			<label style="font-size: 18px;"><strong>Gender?</strong></label>
+			<div ng-repeat="gender in genders">
+				<ion-checkbox ng-model="gender.checked" ng-click="selectGender('{{gender.title}}')"><strong>{{gender.title}}</strong></ion-checkbox> 
+			</div>
+		</ion-list>	  
+		<ion-list class="item item-select">
+			<label style="font-size: 18px;"><strong>Age: {{data.age}} years old</strong></label>
+			<div class="item range">
+				<button ng-click="decreaseAge()" class="button icon-left ion-minus button-clear"></button>
+              	<input type="range" name="ag" min="18" max="70" value="{{data.age}}" ng-model="data.age">
+				<button ng-click="increaseAge()" class="button icon-left ion-plus button-clear"></button>
+			</div>
+		</ion-list>	  
+		<ion-list class="item item-select">
+			<label style="font-size: 18px;"><strong>Weight: {{data.weight}} kg</strong></label>
+			<div class="item range">
+				<button ng-click="decreaseWeight()" class="button icon-left ion-minus button-clear"></button>
+              	<input type="range" name="weight" step="0.5" min="50" max="120" value="{{data.weight}}" ng-model="data.weight" ng-change="calculateBmi()">
+				<button ng-click="increaseWeight()" class="button icon-left ion-plus button-clear"></button>
+			</div>
+		</ion-list>	  
+		<ion-list class="item item-select">
+			<label style="font-size: 18px;"><strong>Tallness: {{data.tallness}} cm</strong>
+			</label>
+			<div class="item range">
+				<button ng-click="decreaseTallness()" class="button icon-left ion-minus button-clear"></button>
+              	<input type="range" name="tallness" min="150" max="210" value="{{data.tallness}}" ng-model="data.tallness" ng-change="calculateBmi()">
+				<button ng-click="increaseTallness()" class="button icon-left ion-plus button-clear"></button>
+			</div>
+			<div style="padding-top: 10px;">
+				<label style="font-size: 18px;"><strong>BMI: {{(bmi | number:2)*1}}</strong></label>
+			</div>
+		</ion-list>
+		<ion-list class="item item-select">
+			<label style="font-size: 18px;"><strong>What would you like to achieve?</strong></label>
+			<ion-checkbox ng-model="data.target.weight"><strong>Loose weight</strong></ion-checkbox>
+			<ion-checkbox ng-model="data.target.cholesterol"><strong>Decrease cholesterol value</strong></ion-checkbox>
+			<ion-checkbox ng-model="data.target.bloodPressure"><strong>Decrease blood pressure</strong></ion-checkbox>
+		</ion-list>
+		<div style="text-align: center;">
+			<button ng-click="submitHealtForm(data,data.weight)" class="button button-positive"><strong>Submit</strong></button>
+		</div>
+	</ion-content>
+</ion-view> 

@@ -1,0 +1,17 @@
+temp
+fonts
+/src/www/css/bootstrap-theme.min.css
+/src/www/css/ratchet.css
+/src/www/css/ratchet.min.css
+/src/www/css/ratchet-theme-android.css
+/src/www/css/ratchet-theme-android.min.css
+/src/www/css/ratchet-theme-ios.css
+/src/www/css/ratchet-theme-ios.min.css
+/src/www/css/bootstrap.min.css
+/src/www/js/libs/angular.min.js
+/src/www/js/libs/bootstrap.min.js
+unused
+platforms
+/src/external/SmartSync/bin/*.cache
+libs_
+fonts_

@@ -1,0 +1,49 @@
+	<ion-view view-title="New Claim" class="padding scroll-bg">
+    <ion-nav-buttons side="Left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content style="margin: 10px;">
+        <div class="list list-inset responsive-sm item-text-wrap">        	
+			<label class="item" ng-model="claim.Insurance_Type__c"><b>Insurance Type: </b>{{claim.Insurance_Type__c}}</label>
+        	<label class="item item-input">
+        		<label class="input-label"><strong>Subject:</strong></label>
+                <textarea ng-model="claim.Subject" placeholder="Give a short subject" rows="1" style="resize:none;"></textarea>
+        	</label>
+			<!--             select item for reason -->
+			<label class="item item-input">
+ 				<label class="input-label" ><strong style="font-size: 18px;">Reason: </strong></label> 				
+			</label>
+			<div ng-repeat="reasonChoice in reasonChoices" >
+				<ion-radio class="item item-input" ng-checked="{{claim.Claim_Reason__c == reasonChoice}}" ng-model="claim.Claim_Reason__c" ng-value="reasonChoice.reasonType">
+					{{reasonChoice.reasonType}}
+				</ion-radio>
+			</div>
+			<ion-item class="item-balanced">
+				<span class="input-label"></span>
+	                <strong>Claim Description:</strong>
+	            </span>
+                <label class="item item-input">
+	                <p>
+	                    <textarea ng-model="claim.Description" placeholder="Add description" rows="10" style="width:100%"></textarea>
+	                </p>
+                </label>
+            	<button ng-click="save()" class="button button-light button-block" style="color: black;">Send</button>
+            </ion-item>
+            
+
+<!--             <label style="font-size: 18px;"><strong>Reason:</strong></label> -->
+<!--             <div ng-repeat="reason in reasons"> -->
+<!--                 <ion-checkbox ng-model="reason.checked" ng-click="selectReason('{{reason.id}}')"><strong>{{reason.name}}</strong></ion-checkbox> -->
+<!--             </div> -->
+
+<!--             <ion-item class="item-balanced"> -->
+<!--                 <strong>Free form comment:</strong> -->
+<!--                 <p> -->
+<!--                     <textarea ng-model="claim.Description" placeholder="Add description" rows="10" style="width:100%"></textarea> -->
+<!--                 </p> -->
+<!--                 <p /> -->
+<!--                 <button ng-click="submitClaim(myFreeText,myReason.name)" class="button button-light" style="color: black;">Submit</button> -->
+<!--             </ion-item> -->
+        </div>
+    </ion-content>
+</ion-view>

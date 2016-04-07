@@ -1,0 +1,33 @@
+<ion-view view-title="ClaimList" class="padding scroll-bg">
+	<div class="bar bar-subheader bar-light" style="text-align: center;">
+		<label style="font-size: 22px;"><strong>My Claims</strong></label>
+	</div>
+
+	<ion-content class="has-subheader">
+		<table class="claimTable" align="center">
+		  <thead style="color: white;" class="claimHead">
+			<tr>
+			  <th class="row1 row-ID">ID</th>
+			  <th class="row2 row-insurance">INSURANCE</th>
+			  <th class="row3 row-title">TITLE</th>
+			  <th class="row4 row-status">STATUS</th>
+			</tr>
+		  </thead>
+		  <tbody>		  
+		      <tr ng-repeat="claim in myClaims">
+				  <td class="row1 row-ID">{{claim.id}}</td>
+				  <td class="row2 row-insurance">{{claim.insurance}}</td>
+				  <td class="row3 row-title">{{claim.title}}</td>
+				  <td class="row4 row-status">{{claim.status}}</td>
+			  </tr>
+		  </tbody>
+		</table>	  
+		<p />
+		<div class="list">
+			<a class="item item-icon-left item-light" href="#/app/claimType">
+				<i class="icon ion-android-add-circle"></i>
+				<strong>Create New Claim</strong>
+			</a>		
+		</div>
+  	</ion-content>
+</ion-view> 

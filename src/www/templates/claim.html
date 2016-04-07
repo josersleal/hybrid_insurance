@@ -1,0 +1,37 @@
+<ion-view  view-title="Claim" class="padding scroll-bg">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+<!-- 	change edit button	 -->
+<!-- 		<a class="button button-clear ion-edit" href="#/app/edit-claim/{{claim.Id}}&claimType='{{claim.Insurance_Type__c}}'"></a> -->
+<a class="button button-clear ion-edit" 
+ui-sref='app.editClaim({claimId: claim.Id, claimType: claim.Insurance_Type__c })'></a>
+	</ion-nav-buttons>
+	<ion-content class="has-header" style="margin: 10px;">
+		<h3>Hello</h3>
+		<ion-list class="list-inset responsive-sm item-text-wrap">
+			<ion-item>
+				<strong style="font-size: 18px;">Insurance Type: </strong>
+<!-- 				<label ng-model='claim.Insurance_Type__c? claim.Insurance_Type__c: "N/A"'>					 -->
+				<label ng-model='claim.Insurance_Type__c'>
+					{{claim.Insurance_Type__c? claim.Insurance_Type__c: "N/A" }}
+				</label>
+			</ion-item>
+			<ion-item>
+				<label><strong style="font-size: 18px;">Subject:</strong> {{claim.Subject ? claim.Subject: "N/A"}}</label> 
+			</ion-item>
+			<ion-item>
+				<label><strong style="font-size: 18px;">Reason: </strong>{{claim.Claim_Reason__c ? claim.Claim_Reason__c: "N/A"}}</label>
+			</ion-item>
+			<ion-item class="item-balanced">
+				<div> 
+					<strong style="font-size: 18px;">Claim Description:</strong>
+					<textarea readonly rows="10" style="width:100%; color:white">{{claim.Description}}</textarea>                
+           		 </div>
+       		</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+</ion-view>

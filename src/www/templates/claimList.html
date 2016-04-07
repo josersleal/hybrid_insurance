@@ -1,0 +1,85 @@
+<ion-view view-title="My Claims" class="padding scroll-bg">
+<!-- 	<h3 class="bar bar-subheader bar-light centeredContainer" align="center">My Claims -->
+<!-- 	</h3> -->
+
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	
+	<ion-nav-buttons side="right">
+<!-- 		<a class="button button-clear ion-ion-plus" href="#/app/create-claim">Create</a> -->
+		<a class="button button-clear ion-plus-round" href="#/app/claimType"></a>		
+	</ion-nav-buttons>
+	
+	<ion-content class="has-header">
+		<ion-list>
+			<div class="row header">
+				<div class="col col-30">
+						<b>CaseNumber</b>
+				</div>
+				<div class="col col-70">
+					<b>Subject</b>
+				</div>
+			</div>
+			<ion-item ng-repeat="claim in claims" class="row ">	
+				<div class="col col-30">
+					<a href="#/app/claims/{{claim.Id}}">{{claim.CaseNumber}}</a>
+				</div>
+				<div class="col col-70 responsive-sm item-text-wrap">{{claim.Subject}}</div>	
+			</ion-item>
+<!-- 			<ion-item ng-repeat="claim in claims"> -->
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col"> -->
+<!-- 					<b>CaseNumber: </b>{{claim.CaseNumber}}<br /> -->
+<!-- 				</div> -->
+<!-- 				<div class="col"> -->
+<!-- 					<a href="#/app/claims/{{claim.id}}"><h3>Subject: </h3> {{claim.Subject}}</a><br />	 -->
+<!-- 				</div> -->
+<!-- <!-- 				<div class="col"> --> 
+<!-- <!-- 					Claim Reason: {{claim.Claim_Reason__c?claim.Claim_Reason__c:"N/A"}}<br /> --> 
+<!-- <!-- 				</div> -->
+<!-- <!-- 				<div class="col"> -->
+<!-- <!-- 					Status: {{claim.Status}}<br /> --> 
+<!-- <!-- 				</div> --> 
+<!-- 			</div>	  -->
+<!-- 				<p> -->
+<!-- 					<a href="#/app/claims/{{claim.id}}"><h3>Subject: </h3> {{claim.Subject}}</a><br />				 -->
+<!-- 					<b>CaseNumber: </b>{{claim.CaseNumber}}<br /> -->
+<!-- 					<b>Reason:</b> <span>{{claim.Reason}}</span><br /> -->
+<!-- 					<b>Insurance Type</b>: {{claim.Insurance_Type__c? claim.Insurance_Type__c : "N/A"}}<br /> -->
+<!-- 					Claim Reason: {{claim.Claim_Reason__c?claim.Claim_Reason__c:"N/A"}}<br /> -->
+<!-- 					Status: {{claim.Status}}<br /> -->
+<!-- 					Priority: {{claim.Priority}}<br />				 -->
+<!-- 					Description: {{claim.Description?claim.Description:"N/A"}}<br /> -->
+<!-- 				</p> -->
+			</ion-item >
+		</ion-list>
+<!-- 	</ion-content> -->
+<!-- 	<table class="claimTable" align="center"> -->
+<!-- 	  <thead class="claimHead"> -->
+<!-- 		<tr> -->
+<!-- 		  <th class="row1 row-ID">ID</th> -->
+<!-- 		  <th class="row2 row-insurance">INSURANCE</th> -->
+<!-- 		  <th class="row3 row-title">TITLE</th> -->
+<!-- 		  <th class="row4 row-status">STATUS</th> -->
+<!-- 		</tr> -->
+<!-- 	  </thead> -->
+<!-- 	  <tbody>		   -->
+<!-- 	      <tr ng-repeat="claim in myClaims"> -->
+<!-- 			  <td class="row1 row-ID">{{claim.id}}</td> -->
+<!-- 			  <td class="row2 row-insurance">{{claim.insurance}}</td> -->
+<!-- 			  <td class="row3 row-title">{{claim.title}}</td> -->
+<!-- 			  <td class="row4 row-status">{{claim.status}}</td> -->
+<!-- 		  </tr> -->
+<!-- 	  </tbody> -->
+<!-- 	</table>	   -->
+<!-- 	<p> -->
+<!-- 	<div class="list"> -->
+<!-- 		<a class="item item-icon-left item-light" href="#/app/claimType"> -->
+<!-- 			<i class="icon ion-android-add-circle"></i> -->
+<!-- 			Create New Claim -->
+<!-- 		</a>		 -->
+<!-- 	</div> -->
+<br /><br />
+  </ion-content>
+</ion-view> 
